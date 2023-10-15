@@ -44,6 +44,7 @@ def connect(params_dic):
     return conn
 conn = connect(param_dic2)
 
-
+print('Saving to DB...')
 df.to_sql(name='constructors', schema='public', con=conn, if_exists='replace')
+print('Finished!')
 
